@@ -7,9 +7,9 @@
 //= require backstretch
 //= require_self
 
-$(function () {
-  $('body').backstretch("http://www.allaboutjazz.com/media/medium/5/c/3/5fe95d0cee2b3abb96b089d077712.jpg");
-});
+// $(function () {
+//   $('body').backstretch("http://www.allaboutjazz.com/media/medium/5/c/3/5fe95d0cee2b3abb96b089d077712.jpg");
+// });
 
 var startTheParty = function() {
   console.log('it works!');
@@ -41,16 +41,24 @@ var loadEvents = function() {
 $(function() {
   loadEvents();
 
-
+$(document).on('click', '#restaurants a.btn', function() {
+  var url = $(this).attr('href');
+  $getJSON(url, function(noms) {
+    #(noms).each(function(index, nom) {
+      
+    });
+  });
+});
   // $.getJSON('/places', function(data) {
   //   console.log(data);
   // });
-  //
-  // $.getJSON('/restaurants', function(restaurants) {
-  //   $(restaurants).each(function(index, restaurant) {
-  //     $('#restaurants').append('<p>' + restaurant.name + '</p>')
-  //   });
-  // });
+
+   $.getJSON('/restaurants', function(restaurants) {
+     $(restaurants).each(function(index, restaurant) {
+       console.log(restaurant);
+       $('#restaurants').append('<p>' + restaurant.name + '</p>')
+     });
+   });
 
 
 
