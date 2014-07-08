@@ -17,7 +17,7 @@ class NotificationMailer < ActionMailer::Base
     # this above goes into the contact_form.html.erb file
   def contact_form(params)
     @params = params
-    mail(from: @params[:user_email to: 'me@myapp.com', subject: 'You have a new contact request'])
+    mail(from: @params[:user_email], to: 'me@myapp.com', subject: 'You have a new contact request')
   end
 
 end

@@ -15,14 +15,15 @@ class StaticController < ApplicationController
         render :home
       end
       format.json do
-        render json: {name: 'Jeremy'}
+        render json: {name: 'Justin'}
       end
     end
   end
 
-  def contact
-    
+  def contact # if we don't call .deliver then rails won't send the email.
+    if request.post? #take the name of class, and call name of mailer action, and pass any params, and call .deliver.
+      NotificationMailer.contact_form(params).deliver #creates an instance on the mailer class
+      redirect_to root_path
+    end
   end
-
-
 end
