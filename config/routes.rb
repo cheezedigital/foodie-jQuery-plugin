@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   get '/contact' => 'static#contact'
   post '/contact' => 'static#contact'
 
+  get '/login' => 'static#login'
+  
+
 end

@@ -26,4 +26,9 @@ class StaticController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def login 
+    UserMailer.welcome('dude@party.house').deliver
+    redirect_to root_path
+  end
 end
