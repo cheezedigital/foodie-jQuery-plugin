@@ -27,8 +27,13 @@ class StaticController < ApplicationController
     end
   end
 
-  def login 
+  def login
     UserMailer.welcome('dude@party.house').deliver
+    redirect_to root_path
+  end
+
+  def report
+    AdminMailer.report.deliver
     redirect_to root_path
   end
 end

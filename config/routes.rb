@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   post '/contact' => 'static#contact'
 
   get '/login' => 'static#login'
-  
+  get '/report' => 'static#report'
 
 end
