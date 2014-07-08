@@ -19,4 +19,10 @@ class StaticController < ApplicationController
       end
     end
   end
+
+  def contact
+    
+  end
+
+
 end
