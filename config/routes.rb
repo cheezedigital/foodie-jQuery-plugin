@@ -3,8 +3,9 @@ Rails.application.routes.draw do
       resources :noms
   end
   resources :events
-  root 'static#home'
   resources :noms
+
+  root 'static#home'
   get '/places' => 'static#places'
   get '/contact' => 'static#contact'
   post '/contact' => 'static#contact'
