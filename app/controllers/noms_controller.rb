@@ -1,4 +1,5 @@
 class NomsController < ApplicationController
+  before_action :set_restaurant
   before_action :set_nom, only: [:show, :edit, :update, :destroy]
 
   # GET /noms
@@ -63,6 +64,11 @@ class NomsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
+    def set_restaurant
+      @restaurant = Restaurant.find(params[:restaurant_id])
+    end
+
     def set_nom
       @nom = Nom.find(params[:id])
     end
