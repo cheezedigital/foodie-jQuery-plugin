@@ -1,14 +1,15 @@
-// //= require jquery
-// //= require jquery_ujs
-// //= require bootstrap
-// //= require moment
-// //= require fullcalendar
-// //= require chosen-jquery
-// //= require backstretch
-// //= require_self
-//
+//= require jquery
+//= require jquery_ujs
+//= require jquery.min.js
+//= require bootstrap
+//= require moment
+//= require fullcalendar
+//= require chosen-jquery
+//= require backstretch
+//= require_self
+$.backstretch("http://www.allaboutjazz.com/media/medium/5/c/3/5fe95d0cee2b3abb96b089d077712.jpg");
+
 // // $(function () {
-// //   $('body').backstretch("http://www.allaboutjazz.com/media/medium/5/c/3/5fe95d0cee2b3abb96b089d077712.jpg");
 // // });
 //
 // var startTheParty = function() {
